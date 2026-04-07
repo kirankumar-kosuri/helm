@@ -7,6 +7,8 @@ metadata:
     component: nginx
     purpose: tolerations-demo
 spec:
+  nodeSelector:
+    │kubernetes.io/hostname: ip-192-168-12-148.ec2.internal                                                                                                             │
   replicas: 1
   selector:
     matchLabels: 
