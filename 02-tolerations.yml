@@ -27,7 +27,7 @@ spec:
       - name: nginx
         image: nginx:latest
       tolerations:
-      - key: "example-key"
+      - key: "project"
         operator: "Equal"
         value: "roboshop"
         effect: "NoSchedule"
