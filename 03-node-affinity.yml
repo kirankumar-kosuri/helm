@@ -17,14 +17,14 @@ spec:
           #   values:
           #   - ssd
       preferredDuringSchedulingIgnoredDuringExecution:
-        - weight: 100
+        - weight: 10
           preference:
             matchExpressions:
             - key: course
               operator: In
               values:
               - linux
-        - weight: 10
+        - weight: 100
           preference:
             matchExpressions:
             - key: course
