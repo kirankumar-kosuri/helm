@@ -12,10 +12,25 @@ spec:
             operator: In
             values:
             - us-east-1d
-          - key:  disktype
-            operator: In
-            values:
-            - ssd
+          # - key:  disktype
+          #   operator: In
+          #   values:
+          #   - ssd
+      preferredDuringSchedulingIgnoredDuringExecution:
+        - weight: 100
+          preference:
+            matchExpressions:
+            - key: project
+              operator: In
+              values:
+              - linux
+        - weight: 10
+          preference:
+            matchExpressions:
+            - key: project
+              operator: In
+              values:
+              - ansible
   containers:
   - name: nginx
     image: nginx
