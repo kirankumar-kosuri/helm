@@ -20,14 +20,14 @@ spec:
         - weight: 100
           preference:
             matchExpressions:
-            - key: project
+            - key: course
               operator: In
               values:
               - linux
         - weight: 10
           preference:
             matchExpressions:
-            - key: project
+            - key: course
               operator: In
               values:
               - ansible
