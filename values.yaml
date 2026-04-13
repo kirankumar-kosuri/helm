@@ -1,6 +1,6 @@
 deployment:
   replicas: 5
-  imageVersion: trixie
+  imageVersion: stabel-bookworm-perl
 
 service:
   type: LoadBalancer
