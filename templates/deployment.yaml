@@ -3,20 +3,24 @@ kind: Deployment
 metadata:
   name: nginx
   labels:
+    purpose: helm-demo
     project: roboshop
-    purpose: taints-demo
+
 spec:
-  replicas: 1
+  replicas: {{ .Values.deployment.replicas }}
   selector:
     matchLabels:
+      purpose: helm-demo
       project: roboshop
-      purpose: taints-demo
+
   template:
     metadata:
       labels:
+        purpose: helm-demo
         project: roboshop
-        purpose: taints-demo
+
     spec:
       containers:
       - name: nginx
-        image: nginx:latest
+        image: nginx:{{ .Values.deployment.imageVersion }}
+
